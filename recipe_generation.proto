@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service RecipeGeneration {
+    rpc getRecipeBreakDown (RecipeBreakdownRequest) returns (RecipeBreakdownReply) {}
+}
+
+message RecipeBreakdownRequest {
+    string description = 1;
+}
+
+message RecipeBreakdownReply {
+    string message = 1;
+}
