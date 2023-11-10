@@ -8,6 +8,26 @@ message RecipeBreakdownRequest {
     string description = 1;
 }
 
+message Ingredient {
+    string name = 1;
+    float  quantity = 2;
+    string unit = 3;
+}
+
+message Kitchenware {
+    string name = 1;
+    int32 quantity = 2;
+}
+
+message Task {
+    string title = 1;
+    string description = 2;
+    int32 difficulty = 3;
+    repeated Ingredient ingredients = 4;
+    repeated Kitchenware kitchenware = 5;
+    repeated string dependencies = 6;
+}
+
 message RecipeBreakdownReply {
-    string message = 1;
+    repeated Task tasks = 1;
 }
