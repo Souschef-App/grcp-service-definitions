@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "souschef.server.Services.SubtaskGeneration";
+
 service RecipeGeneration {
     rpc getRecipeBreakDown (RecipeBreakdownRequest) returns (RecipeBreakdownReply) {}
 }
