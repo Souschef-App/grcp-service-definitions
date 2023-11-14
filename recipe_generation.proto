@@ -26,9 +26,10 @@ message Task {
     string title = 2;
     string description = 3;
     int32 difficulty = 4;
-    repeated Ingredient ingredients = 5;
-    repeated Kitchenware kitchenware = 6;
-    repeated bytes dependencies = 7;
+    int32 duration = 5;
+    repeated Ingredient ingredients = 6;
+    repeated Kitchenware kitchenware = 7;
+    repeated bytes dependencies = 8;
 }
 
 message RecipeBreakdownReply {
