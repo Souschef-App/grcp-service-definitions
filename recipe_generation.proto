@@ -29,12 +29,14 @@ message Kitchenware {
 }
 
 message Task {
-    string title = 1;
-    string description = 2;
-    int32 difficulty = 3;
-    repeated Ingredient ingredients = 4;
-    repeated Kitchenware kitchenware = 5;
-    repeated string dependencies = 6;
+    bytes  uuid = 1;
+    string title = 2;
+    string description = 3;
+    int32 difficulty = 4;
+    int32 duration = 5;
+    repeated Ingredient ingredients = 6;
+    repeated Kitchenware kitchenware = 7;
+    repeated bytes dependencies = 8;
 }
 
 message RecipeBreakdownReply {
