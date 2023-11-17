@@ -4,10 +4,17 @@ option csharp_namespace = "souschef.server.Services.SubtaskGeneration";
 
 service RecipeGeneration {
     rpc getRecipeBreakDown (RecipeBreakdownRequest) returns (RecipeBreakdownReply) {}
+    rpc retryRecipeBreakDown (RecipeBreakdownRequest) returns (RecipeBreakdownReply) {}
+    rpc retryTask (RetryTaskRequest) returns (RetryTaskRequestReply) {}
 }
 
 message RecipeBreakdownRequest {
     string description = 1;
+}
+
+message RetryTaskRequest {
+    Task task = 1;
+    string prompt = 2;
 }
 
 message Ingredient {
@@ -33,3 +40,8 @@ message Task {
 message RecipeBreakdownReply {
     repeated Task tasks = 1;
 }
+
+message RetryTaskRequestReply {
+     Task task = 1;
+}
+
