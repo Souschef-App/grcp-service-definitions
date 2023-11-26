@@ -28,6 +28,11 @@ message Kitchenware {
     int32 quantity = 2;
 }
 
+message Dependency {
+    bytes UUID = 1;
+    string name = 2;
+}
+
 message Task {
     bytes  uuid = 1;
     string title = 2;
@@ -36,7 +41,7 @@ message Task {
     int32 duration = 5;
     repeated Ingredient ingredients = 6;
     repeated Kitchenware kitchenware = 7;
-    repeated bytes dependencies = 8;
+    repeated Dependency dependencies = 8;
 }
 
 message RecipeBreakdownReply {
