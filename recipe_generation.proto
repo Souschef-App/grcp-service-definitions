@@ -17,10 +17,16 @@ message RetryTaskRequest {
     string prompt = 2;
 }
 
+message Fraction {
+    float whole = 1;
+    float numerator = 2;
+    float denominator = 3;
+}
+
 message Ingredient {
-    string name = 1;
-    float  quantity = 2;
-    string unit = 3;
+    string   name = 1;
+    Fraction quantity = 2;
+    string   unit = 3;
 }
 
 message Kitchenware {
