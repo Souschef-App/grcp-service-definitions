@@ -18,9 +18,9 @@ message RetryTaskRequest {
 }
 
 message Fraction {
-    float whole = 1;
-    float numerator = 2;
-    float denominator = 3;
+    int32 whole = 1;
+    int32 numerator = 2;
+    int32 denominator = 3;
 }
 
 message Ingredient {
